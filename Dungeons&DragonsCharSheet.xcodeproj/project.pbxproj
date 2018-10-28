@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D5F52A921854B8A00AE82B7 /* RaceSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52A821854B8A00AE82B7 /* RaceSelectViewController.swift */; };
+		6D5F52AB21854CC100AE82B7 /* CharactaerSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52AA21854CC100AE82B7 /* CharactaerSelectTableViewController.swift */; };
+		6D5F52AD2185517D00AE82B7 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52AC2185517D00AE82B7 /* Classes.swift */; };
+		6D5F52AF2185533B00AE82B7 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52AE2185533B00AE82B7 /* Languages.swift */; };
+		6D5F52B1218555A700AE82B7 /* Barbarian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52B0218555A700AE82B7 /* Barbarian.swift */; };
+		6D5F52B521864E3800AE82B7 /* RollStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52B421864E3800AE82B7 /* RollStatsViewController.swift */; };
+		6D6B6271214311DE00ECAD7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6B6270214311DE00ECAD7B /* AppDelegate.swift */; };
+		6D6B6276214311DE00ECAD7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6B6274214311DE00ECAD7B /* Main.storyboard */; };
+		6D6B6279214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D6B6277214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodeld */; };
+		6D6B627B214311E000ECAD7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6B627A214311E000ECAD7B /* Assets.xcassets */; };
+		6D6B627E214311E000ECAD7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6B627C214311E000ECAD7B /* LaunchScreen.storyboard */; };
+		6D6B6289214311E000ECAD7B /* Dungeons_DragonsCharSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6B6288214311E000ECAD7B /* Dungeons_DragonsCharSheetTests.swift */; };
+		6D6B6294214311E000ECAD7B /* Dungeons_DragonsCharSheetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6B6293214311E000ECAD7B /* Dungeons_DragonsCharSheetUITests.swift */; };
+		6D70437B21852D2C007614AC /* Races.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70437A21852D2C007614AC /* Races.swift */; };
+		6D70437D21852DEC007614AC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70437C21852DEC007614AC /* Character.swift */; };
+		6D70437F218531F3007614AC /* RollStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70437E218531F3007614AC /* RollStats.swift */; };
+		6D70438121853213007614AC /* DiceRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70438021853213007614AC /* DiceRoll.swift */; };
+		6DB999FE2186588500DC1E9F /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB999FD2186588500DC1E9F /* CharacterViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D6B6285214311E000ECAD7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D6B6265214311DE00ECAD7B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D6B626C214311DE00ECAD7B;
+			remoteInfo = "Dungeons&DragonsCharSheet";
+		};
+		6D6B6290214311E000ECAD7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D6B6265214311DE00ECAD7B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D6B626C214311DE00ECAD7B;
+			remoteInfo = "Dungeons&DragonsCharSheet";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6D5F52A821854B8A00AE82B7 /* RaceSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSelectViewController.swift; sourceTree = "<group>"; };
+		6D5F52AA21854CC100AE82B7 /* CharactaerSelectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactaerSelectTableViewController.swift; sourceTree = "<group>"; };
+		6D5F52AC2185517D00AE82B7 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		6D5F52AE2185533B00AE82B7 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
+		6D5F52B0218555A700AE82B7 /* Barbarian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barbarian.swift; sourceTree = "<group>"; };
+		6D5F52B421864E3800AE82B7 /* RollStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStatsViewController.swift; sourceTree = "<group>"; };
+		6D6B626D214311DE00ECAD7B /* Dungeons&DragonsCharSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeons&DragonsCharSheet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D6B6270214311DE00ECAD7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6D6B6275214311DE00ECAD7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D6B6278214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dungeons_DragonsCharSheet.xcdatamodel; sourceTree = "<group>"; };
+		6D6B627A214311E000ECAD7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D6B627D214311E000ECAD7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D6B627F214311E000ECAD7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D6B6284214311E000ECAD7B /* Dungeons&DragonsCharSheetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dungeons&DragonsCharSheetTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D6B6288214311E000ECAD7B /* Dungeons_DragonsCharSheetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeons_DragonsCharSheetTests.swift; sourceTree = "<group>"; };
+		6D6B628A214311E000ECAD7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D6B628F214311E000ECAD7B /* Dungeons&DragonsCharSheetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dungeons&DragonsCharSheetUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D6B6293214311E000ECAD7B /* Dungeons_DragonsCharSheetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeons_DragonsCharSheetUITests.swift; sourceTree = "<group>"; };
+		6D6B6295214311E000ECAD7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D70437A21852D2C007614AC /* Races.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Races.swift; sourceTree = "<group>"; };
+		6D70437C21852DEC007614AC /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		6D70437E218531F3007614AC /* RollStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStats.swift; sourceTree = "<group>"; };
+		6D70438021853213007614AC /* DiceRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRoll.swift; sourceTree = "<group>"; };
+		6DB999FD2186588500DC1E9F /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D6B626A214311DE00ECAD7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D6B6281214311E000ECAD7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D6B628C214311E000ECAD7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D6B6264214311DE00ECAD7B = {
+			isa = PBXGroup;
+			children = (
+				6D6B626F214311DE00ECAD7B /* Dungeons&DragonsCharSheet */,
+				6D6B6287214311E000ECAD7B /* Dungeons&DragonsCharSheetTests */,
+				6D6B6292214311E000ECAD7B /* Dungeons&DragonsCharSheetUITests */,
+				6D6B626E214311DE00ECAD7B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D6B626E214311DE00ECAD7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D6B626D214311DE00ECAD7B /* Dungeons&DragonsCharSheet.app */,
+				6D6B6284214311E000ECAD7B /* Dungeons&DragonsCharSheetTests.xctest */,
+				6D6B628F214311E000ECAD7B /* Dungeons&DragonsCharSheetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D6B626F214311DE00ECAD7B /* Dungeons&DragonsCharSheet */ = {
+			isa = PBXGroup;
+			children = (
+				6D5F52B421864E3800AE82B7 /* RollStatsViewController.swift */,
+				6D70437C21852DEC007614AC /* Character.swift */,
+				6D5F52AE2185533B00AE82B7 /* Languages.swift */,
+				6D6B6270214311DE00ECAD7B /* AppDelegate.swift */,
+				6D5F52A821854B8A00AE82B7 /* RaceSelectViewController.swift */,
+				6D5F52AC2185517D00AE82B7 /* Classes.swift */,
+				6D5F52B0218555A700AE82B7 /* Barbarian.swift */,
+				6D70437A21852D2C007614AC /* Races.swift */,
+				6D70437E218531F3007614AC /* RollStats.swift */,
+				6D70438021853213007614AC /* DiceRoll.swift */,
+				6D6B6274214311DE00ECAD7B /* Main.storyboard */,
+				6DB999FD2186588500DC1E9F /* CharacterViewController.swift */,
+				6D5F52AA21854CC100AE82B7 /* CharactaerSelectTableViewController.swift */,
+				6D6B627A214311E000ECAD7B /* Assets.xcassets */,
+				6D6B627C214311E000ECAD7B /* LaunchScreen.storyboard */,
+				6D6B627F214311E000ECAD7B /* Info.plist */,
+				6D6B6277214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodeld */,
+			);
+			path = "Dungeons&DragonsCharSheet";
+			sourceTree = "<group>";
+		};
+		6D6B6287214311E000ECAD7B /* Dungeons&DragonsCharSheetTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D6B6288214311E000ECAD7B /* Dungeons_DragonsCharSheetTests.swift */,
+				6D6B628A214311E000ECAD7B /* Info.plist */,
+			);
+			path = "Dungeons&DragonsCharSheetTests";
+			sourceTree = "<group>";
+		};
+		6D6B6292214311E000ECAD7B /* Dungeons&DragonsCharSheetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6D6B6293214311E000ECAD7B /* Dungeons_DragonsCharSheetUITests.swift */,
+				6D6B6295214311E000ECAD7B /* Info.plist */,
+			);
+			path = "Dungeons&DragonsCharSheetUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D6B626C214311DE00ECAD7B /* Dungeons&DragonsCharSheet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D6B6298214311E000ECAD7B /* Build configuration list for PBXNativeTarget "Dungeons&DragonsCharSheet" */;
+			buildPhases = (
+				6D6B6269214311DE00ECAD7B /* Sources */,
+				6D6B626A214311DE00ECAD7B /* Frameworks */,
+				6D6B626B214311DE00ECAD7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dungeons&DragonsCharSheet";
+			productName = "Dungeons&DragonsCharSheet";
+			productReference = 6D6B626D214311DE00ECAD7B /* Dungeons&DragonsCharSheet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D6B6283214311E000ECAD7B /* Dungeons&DragonsCharSheetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D6B629B214311E000ECAD7B /* Build configuration list for PBXNativeTarget "Dungeons&DragonsCharSheetTests" */;
+			buildPhases = (
+				6D6B6280214311E000ECAD7B /* Sources */,
+				6D6B6281214311E000ECAD7B /* Frameworks */,
+				6D6B6282214311E000ECAD7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D6B6286214311E000ECAD7B /* PBXTargetDependency */,
+			);
+			name = "Dungeons&DragonsCharSheetTests";
+			productName = "Dungeons&DragonsCharSheetTests";
+			productReference = 6D6B6284214311E000ECAD7B /* Dungeons&DragonsCharSheetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6D6B628E214311E000ECAD7B /* Dungeons&DragonsCharSheetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D6B629E214311E000ECAD7B /* Build configuration list for PBXNativeTarget "Dungeons&DragonsCharSheetUITests" */;
+			buildPhases = (
+				6D6B628B214311E000ECAD7B /* Sources */,
+				6D6B628C214311E000ECAD7B /* Frameworks */,
+				6D6B628D214311E000ECAD7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D6B6291214311E000ECAD7B /* PBXTargetDependency */,
+			);
+			name = "Dungeons&DragonsCharSheetUITests";
+			productName = "Dungeons&DragonsCharSheetUITests";
+			productReference = 6D6B628F214311E000ECAD7B /* Dungeons&DragonsCharSheetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D6B6265214311DE00ECAD7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Liam Flaherty";
+				TargetAttributes = {
+					6D6B626C214311DE00ECAD7B = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+					};
+					6D6B6283214311E000ECAD7B = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+						TestTargetID = 6D6B626C214311DE00ECAD7B;
+					};
+					6D6B628E214311E000ECAD7B = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+						TestTargetID = 6D6B626C214311DE00ECAD7B;
+					};
+				};
+			};
+			buildConfigurationList = 6D6B6268214311DE00ECAD7B /* Build configuration list for PBXProject "Dungeons&DragonsCharSheet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D6B6264214311DE00ECAD7B;
+			productRefGroup = 6D6B626E214311DE00ECAD7B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D6B626C214311DE00ECAD7B /* Dungeons&DragonsCharSheet */,
+				6D6B6283214311E000ECAD7B /* Dungeons&DragonsCharSheetTests */,
+				6D6B628E214311E000ECAD7B /* Dungeons&DragonsCharSheetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D6B626B214311DE00ECAD7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D6B627E214311E000ECAD7B /* LaunchScreen.storyboard in Resources */,
+				6D6B627B214311E000ECAD7B /* Assets.xcassets in Resources */,
+				6D6B6276214311DE00ECAD7B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D6B6282214311E000ECAD7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D6B628D214311E000ECAD7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D6B6269214311DE00ECAD7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D70437F218531F3007614AC /* RollStats.swift in Sources */,
+				6D70438121853213007614AC /* DiceRoll.swift in Sources */,
+				6D5F52A921854B8A00AE82B7 /* RaceSelectViewController.swift in Sources */,
+				6DB999FE2186588500DC1E9F /* CharacterViewController.swift in Sources */,
+				6D5F52B1218555A700AE82B7 /* Barbarian.swift in Sources */,
+				6D5F52AF2185533B00AE82B7 /* Languages.swift in Sources */,
+				6D6B6279214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodeld in Sources */,
+				6D70437D21852DEC007614AC /* Character.swift in Sources */,
+				6D5F52B521864E3800AE82B7 /* RollStatsViewController.swift in Sources */,
+				6D70437B21852D2C007614AC /* Races.swift in Sources */,
+				6D6B6271214311DE00ECAD7B /* AppDelegate.swift in Sources */,
+				6D5F52AD2185517D00AE82B7 /* Classes.swift in Sources */,
+				6D5F52AB21854CC100AE82B7 /* CharactaerSelectTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D6B6280214311E000ECAD7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D6B6289214311E000ECAD7B /* Dungeons_DragonsCharSheetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D6B628B214311E000ECAD7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D6B6294214311E000ECAD7B /* Dungeons_DragonsCharSheetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D6B6286214311E000ECAD7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D6B626C214311DE00ECAD7B /* Dungeons&DragonsCharSheet */;
+			targetProxy = 6D6B6285214311E000ECAD7B /* PBXContainerItemProxy */;
+		};
+		6D6B6291214311E000ECAD7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D6B626C214311DE00ECAD7B /* Dungeons&DragonsCharSheet */;
+			targetProxy = 6D6B6290214311E000ECAD7B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D6B6274214311DE00ECAD7B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D6B6275214311DE00ECAD7B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6D6B627C214311E000ECAD7B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D6B627D214311E000ECAD7B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D6B6296214311E000ECAD7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6D6B6297214311E000ECAD7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D6B6299214311E000ECAD7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeons&DragonsCharSheet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D6B629A214311E000ECAD7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeons&DragonsCharSheet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6D6B629C214311E000ECAD7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeons&DragonsCharSheetTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dungeons&DragonsCharSheet.app/Dungeons&DragonsCharSheet";
+			};
+			name = Debug;
+		};
+		6D6B629D214311E000ECAD7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeons&DragonsCharSheetTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dungeons&DragonsCharSheet.app/Dungeons&DragonsCharSheet";
+			};
+			name = Release;
+		};
+		6D6B629F214311E000ECAD7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeons&DragonsCharSheetUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dungeons&DragonsCharSheet";
+			};
+			name = Debug;
+		};
+		6D6B62A0214311E000ECAD7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Dungeons&DragonsCharSheetUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Dungeons&DragonsCharSheet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D6B6268214311DE00ECAD7B /* Build configuration list for PBXProject "Dungeons&DragonsCharSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D6B6296214311E000ECAD7B /* Debug */,
+				6D6B6297214311E000ECAD7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D6B6298214311E000ECAD7B /* Build configuration list for PBXNativeTarget "Dungeons&DragonsCharSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D6B6299214311E000ECAD7B /* Debug */,
+				6D6B629A214311E000ECAD7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D6B629B214311E000ECAD7B /* Build configuration list for PBXNativeTarget "Dungeons&DragonsCharSheetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D6B629C214311E000ECAD7B /* Debug */,
+				6D6B629D214311E000ECAD7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D6B629E214311E000ECAD7B /* Build configuration list for PBXNativeTarget "Dungeons&DragonsCharSheetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D6B629F214311E000ECAD7B /* Debug */,
+				6D6B62A0214311E000ECAD7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6D6B6277214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6D6B6278214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodel */,
+			);
+			currentVersion = 6D6B6278214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodel */;
+			path = Dungeons_DragonsCharSheet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6D6B6265214311DE00ECAD7B /* Project object */;
+}
