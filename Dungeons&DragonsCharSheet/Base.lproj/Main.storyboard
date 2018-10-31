@@ -322,6 +322,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Abilities: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z2e-gx-qAR">
+                                <rect key="frame" x="16" y="447" width="330" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6RX-dY-7Jr"/>
@@ -335,6 +342,7 @@
                         <outlet property="raceLabel" destination="FKH-Vp-13Y" id="nQ1-bP-SWL"/>
                         <outlet property="strLabel" destination="CoF-vD-grn" id="erp-hO-cnY"/>
                         <outlet property="subRaceLabel" destination="hma-fA-fgj" id="ln6-7K-dep"/>
+                        <outlet property="test" destination="z2e-gx-qAR" id="TE3-gk-aZ7"/>
                         <outlet property="wisLabel" destination="40B-cm-dft" id="mWa-hB-fp8"/>
                     </connections>
                 </viewController>

@@ -61,6 +61,16 @@ func dTen(_ rolls: Int)->Int{
     return total
 }
 
+func dTwelve(_ rolls: Int)->Int{
+    var total : Int = 0
+    var x = 0
+    while x < rolls{
+        total += Int.random(in: 1...12)
+        x += 1
+    }
+    return total
+}
+
 func dTwenty(_ rolls: Int)->Int{
     var total : Int = 0
     var x = 0

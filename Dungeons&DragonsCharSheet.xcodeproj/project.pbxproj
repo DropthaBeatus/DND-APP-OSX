@@ -25,6 +25,7 @@
 		6D70437F218531F3007614AC /* RollStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70437E218531F3007614AC /* RollStats.swift */; };
 		6D70438121853213007614AC /* DiceRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70438021853213007614AC /* DiceRoll.swift */; };
 		6DB999FE2186588500DC1E9F /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB999FD2186588500DC1E9F /* CharacterViewController.swift */; };
+		6DB99A002186982E00DC1E9F /* skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB999FF2186982E00DC1E9F /* skills.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		6D70437E218531F3007614AC /* RollStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStats.swift; sourceTree = "<group>"; };
 		6D70438021853213007614AC /* DiceRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRoll.swift; sourceTree = "<group>"; };
 		6DB999FD2186588500DC1E9F /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		6DB999FF2186982E00DC1E9F /* skills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skills.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				6D5F52B421864E3800AE82B7 /* RollStatsViewController.swift */,
 				6D70437C21852DEC007614AC /* Character.swift */,
+				6DB999FF2186982E00DC1E9F /* skills.swift */,
 				6D5F52AE2185533B00AE82B7 /* Languages.swift */,
 				6D6B6270214311DE00ECAD7B /* AppDelegate.swift */,
 				6D5F52A821854B8A00AE82B7 /* RaceSelectViewController.swift */,
@@ -297,6 +300,7 @@
 				6D5F52A921854B8A00AE82B7 /* RaceSelectViewController.swift in Sources */,
 				6DB999FE2186588500DC1E9F /* CharacterViewController.swift in Sources */,
 				6D5F52B1218555A700AE82B7 /* Barbarian.swift in Sources */,
+				6DB99A002186982E00DC1E9F /* skills.swift in Sources */,
 				6D5F52AF2185533B00AE82B7 /* Languages.swift in Sources */,
 				6D6B6279214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodeld in Sources */,
 				6D70437D21852DEC007614AC /* Character.swift in Sources */,

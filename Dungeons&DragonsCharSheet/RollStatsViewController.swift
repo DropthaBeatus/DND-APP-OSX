@@ -37,7 +37,7 @@ class RollStatsViewController: UIViewController {
     }
     
     @IBAction func rollStats(_ sender: Any) {
-        statBlock = rollBigHuevosDTwenty()
+        statBlock = rollThreeDSixes()
         LabelArr = [strLabel, dexLabel, constLabel, intLabel, wisLabel, chaLabel]
         for x in 0...statBlock!.count-1{
             LabelArr?[x].text = String(statBlock![x])

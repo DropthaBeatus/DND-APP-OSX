@@ -28,19 +28,29 @@ class CharacterViewController: UIViewController {
     
     @IBOutlet weak var chaLabel: UILabel!
     
+    @IBOutlet weak var test: UITextView!
     
     var LabelArr : [UILabel]?
     var race : Race?
     var statBlock : [Int]?
     var subRace : String?
     var playerClass : Class?
+    var testString : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let player = Character(raceTemp: race!, statBlock: statBlock!, subRaceTemp: subRace, classEnum : playerClass!)
+        let clas1 = classSelectandCreate(playerClass: playerClass!)
+        let player = Character(raceTemp: race!, statBlock: statBlock!, subRaceTemp: subRace)
         getRaceStats(char: player)
         LabelArr = [strLabel, dexLabel, constLabel, intLabel, wisLabel, chaLabel]
         loadUILabels(player: player)
+        for x in 0...player.skillArray.count-1{
+            testString += String(player.skillArray[x]) + "\n"
+        }
+        player.playerClasses?.append(clas1)
+        //player.transferFromClasses()
+        testString += "AC: " + String(clas1.AC)//String(player.playerClasses![0].health)
+        test.text = testString
     }
     
     func loadUILabels(player : Character){
@@ -54,6 +64,52 @@ class CharacterViewController: UIViewController {
         }
         classLabel.text = playerClass?.rawValue
         
+    }
+    
+    func classSelectandCreate(playerClass : Class)->Classes{
+        switch(playerClass){
+        case .BARBARIAN:
+            return Barbarian(level: 1, classEnum: playerClass, statBlock: statBlock!)
+            /*
+             case .BARD
+             case .CLERIC
+             case .DRUID
+             case .FIGHTER
+             case .MONK
+             case .PALADIN
+             case .RANGER
+             case .ROUGE
+             case .SORCERER
+             case .WARLOCK
+             case .WIZARD
+             */
+        default :
+            return Classes(level: 1, classEnum: playerClass, statBlock: statBlock!)
+        }
+    }
+    
+    func classSelectandLevel(playerClass : Classes){
+        switch(playerClass.classEnum){
+        case .BARBARIAN:
+            playerClass.levelUp()
+            //need a way to setup a way for ability improvement
+           // statArray = playerClass.statArray
+            /*
+             case .BARD
+             case .CLERIC
+             case .DRUID
+             case .FIGHTER
+             case .MONK
+             case .PALADIN
+             case .RANGER
+             case .ROUGE
+             case .SORCERER
+             case .WARLOCK
+             case .WIZARD
+             */
+        default :
+            return
+        }
     }
     
 
