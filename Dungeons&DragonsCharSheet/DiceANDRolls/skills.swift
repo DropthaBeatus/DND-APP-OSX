@@ -8,6 +8,8 @@
 
 import Foundation
 
+//lets make an array of NS Dict instead so it can easily readable its not like I need encapsulation
+
 //athletics acrobatics sleightOfHand stealth arcana history investigation nature religion animalHandling insight medicine perception survival deception intimidation performance persuasion
 var skillArray : [Int] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
@@ -18,8 +20,8 @@ func getModifier(_ skill : Int)->Int{
         return Int(total * -1)
     }
     else{
-        let total = temp - (floor(Double(skill/2)))
-        return Int(total * -1)
+        let total = (floor(Double(skill/2))) - 5
+        return Int(total)
     }
 }
 

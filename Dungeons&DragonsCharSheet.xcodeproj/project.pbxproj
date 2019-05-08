@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D4207E2223085790005329A /* Paladin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4207E1223085790005329A /* Paladin.swift */; };
 		6D5F52A921854B8A00AE82B7 /* RaceSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52A821854B8A00AE82B7 /* RaceSelectViewController.swift */; };
 		6D5F52AB21854CC100AE82B7 /* CharactaerSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52AA21854CC100AE82B7 /* CharactaerSelectTableViewController.swift */; };
 		6D5F52AD2185517D00AE82B7 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52AC2185517D00AE82B7 /* Classes.swift */; };
 		6D5F52AF2185533B00AE82B7 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52AE2185533B00AE82B7 /* Languages.swift */; };
 		6D5F52B1218555A700AE82B7 /* Barbarian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52B0218555A700AE82B7 /* Barbarian.swift */; };
 		6D5F52B521864E3800AE82B7 /* RollStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52B421864E3800AE82B7 /* RollStatsViewController.swift */; };
+		6D64F9052273C7CA0062BEAB /* ClassENUM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D64F9042273C7CA0062BEAB /* ClassENUM.swift */; };
+		6D64F9082273CFAE0062BEAB /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D64F9072273CFAE0062BEAB /* testViewController.swift */; };
+		6D64F90A2273FEDE0062BEAB /* DiceRoll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D64F9092273FEDE0062BEAB /* DiceRoll.storyboard */; };
 		6D6B6271214311DE00ECAD7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6B6270214311DE00ECAD7B /* AppDelegate.swift */; };
 		6D6B6276214311DE00ECAD7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6B6274214311DE00ECAD7B /* Main.storyboard */; };
 		6D6B6279214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D6B6277214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodeld */; };
@@ -24,6 +28,8 @@
 		6D70437D21852DEC007614AC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70437C21852DEC007614AC /* Character.swift */; };
 		6D70437F218531F3007614AC /* RollStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70437E218531F3007614AC /* RollStats.swift */; };
 		6D70438121853213007614AC /* DiceRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70438021853213007614AC /* DiceRoll.swift */; };
+		6D74220C2282FE4C0019975C /* DiceRollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D74220B2282FE4C0019975C /* DiceRollViewController.swift */; };
+		6D74220E228316690019975C /* CharacterPrimaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D74220D228316690019975C /* CharacterPrimaryViewController.swift */; };
 		6DB999FE2186588500DC1E9F /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB999FD2186588500DC1E9F /* CharacterViewController.swift */; };
 		6DB99A002186982E00DC1E9F /* skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB999FF2186982E00DC1E9F /* skills.swift */; };
 /* End PBXBuildFile section */
@@ -46,12 +52,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D4207E1223085790005329A /* Paladin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paladin.swift; sourceTree = "<group>"; };
 		6D5F52A821854B8A00AE82B7 /* RaceSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSelectViewController.swift; sourceTree = "<group>"; };
 		6D5F52AA21854CC100AE82B7 /* CharactaerSelectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactaerSelectTableViewController.swift; sourceTree = "<group>"; };
 		6D5F52AC2185517D00AE82B7 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 		6D5F52AE2185533B00AE82B7 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		6D5F52B0218555A700AE82B7 /* Barbarian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barbarian.swift; sourceTree = "<group>"; };
 		6D5F52B421864E3800AE82B7 /* RollStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStatsViewController.swift; sourceTree = "<group>"; };
+		6D64F9042273C7CA0062BEAB /* ClassENUM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassENUM.swift; sourceTree = "<group>"; };
+		6D64F9072273CFAE0062BEAB /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
+		6D64F9092273FEDE0062BEAB /* DiceRoll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiceRoll.storyboard; sourceTree = "<group>"; };
 		6D6B626D214311DE00ECAD7B /* Dungeons&DragonsCharSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dungeons&DragonsCharSheet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6B6270214311DE00ECAD7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D6B6275214311DE00ECAD7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +79,8 @@
 		6D70437C21852DEC007614AC /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		6D70437E218531F3007614AC /* RollStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollStats.swift; sourceTree = "<group>"; };
 		6D70438021853213007614AC /* DiceRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRoll.swift; sourceTree = "<group>"; };
+		6D74220B2282FE4C0019975C /* DiceRollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRollViewController.swift; sourceTree = "<group>"; };
+		6D74220D228316690019975C /* CharacterPrimaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPrimaryViewController.swift; sourceTree = "<group>"; };
 		6DB999FD2186588500DC1E9F /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		6DB999FF2186982E00DC1E9F /* skills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skills.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +110,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D64F9012273C7510062BEAB /* CharacterModel */ = {
+			isa = PBXGroup;
+			children = (
+				6D70437C21852DEC007614AC /* Character.swift */,
+				6D5F52AC2185517D00AE82B7 /* Classes.swift */,
+				6D64F9032273C7900062BEAB /* ClassesModel */,
+			);
+			path = CharacterModel;
+			sourceTree = "<group>";
+		};
+		6D64F9022273C7700062BEAB /* ENUMS */ = {
+			isa = PBXGroup;
+			children = (
+				6D64F9042273C7CA0062BEAB /* ClassENUM.swift */,
+				6D5F52AE2185533B00AE82B7 /* Languages.swift */,
+				6D70437A21852D2C007614AC /* Races.swift */,
+			);
+			path = ENUMS;
+			sourceTree = "<group>";
+		};
+		6D64F9032273C7900062BEAB /* ClassesModel */ = {
+			isa = PBXGroup;
+			children = (
+				6D4207E1223085790005329A /* Paladin.swift */,
+				6D5F52B0218555A700AE82B7 /* Barbarian.swift */,
+			);
+			path = ClassesModel;
+			sourceTree = "<group>";
+		};
+		6D64F9062273CF3C0062BEAB /* DiceANDRolls */ = {
+			isa = PBXGroup;
+			children = (
+				6DB999FF2186982E00DC1E9F /* skills.swift */,
+				6D70437E218531F3007614AC /* RollStats.swift */,
+				6D70438021853213007614AC /* DiceRoll.swift */,
+			);
+			path = DiceANDRolls;
+			sourceTree = "<group>";
+		};
 		6D6B6264214311DE00ECAD7B = {
 			isa = PBXGroup;
 			children = (
@@ -121,18 +172,14 @@
 		6D6B626F214311DE00ECAD7B /* Dungeons&DragonsCharSheet */ = {
 			isa = PBXGroup;
 			children = (
-				6D5F52B421864E3800AE82B7 /* RollStatsViewController.swift */,
-				6D70437C21852DEC007614AC /* Character.swift */,
-				6DB999FF2186982E00DC1E9F /* skills.swift */,
-				6D5F52AE2185533B00AE82B7 /* Languages.swift */,
 				6D6B6270214311DE00ECAD7B /* AppDelegate.swift */,
-				6D5F52A821854B8A00AE82B7 /* RaceSelectViewController.swift */,
-				6D5F52AC2185517D00AE82B7 /* Classes.swift */,
-				6D5F52B0218555A700AE82B7 /* Barbarian.swift */,
-				6D70437A21852D2C007614AC /* Races.swift */,
-				6D70437E218531F3007614AC /* RollStats.swift */,
-				6D70438021853213007614AC /* DiceRoll.swift */,
+				6D74220A2282FDEA0019975C /* CharacterCreationVCs */,
+				6D64F9062273CF3C0062BEAB /* DiceANDRolls */,
+				6D64F9022273C7700062BEAB /* ENUMS */,
+				6D64F9012273C7510062BEAB /* CharacterModel */,
+				6D7422082282FD8B0019975C /* DiceRollVC&Storyboard */,
 				6D6B6274214311DE00ECAD7B /* Main.storyboard */,
+				6D64F9072273CFAE0062BEAB /* testViewController.swift */,
 				6DB999FD2186588500DC1E9F /* CharacterViewController.swift */,
 				6D5F52AA21854CC100AE82B7 /* CharactaerSelectTableViewController.swift */,
 				6D6B627A214311E000ECAD7B /* Assets.xcassets */,
@@ -159,6 +206,25 @@
 				6D6B6295214311E000ECAD7B /* Info.plist */,
 			);
 			path = "Dungeons&DragonsCharSheetUITests";
+			sourceTree = "<group>";
+		};
+		6D7422082282FD8B0019975C /* DiceRollVC&Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6D74220D228316690019975C /* CharacterPrimaryViewController.swift */,
+				6D64F9092273FEDE0062BEAB /* DiceRoll.storyboard */,
+				6D74220B2282FE4C0019975C /* DiceRollViewController.swift */,
+			);
+			path = "DiceRollVC&Storyboard";
+			sourceTree = "<group>";
+		};
+		6D74220A2282FDEA0019975C /* CharacterCreationVCs */ = {
+			isa = PBXGroup;
+			children = (
+				6D5F52A821854B8A00AE82B7 /* RaceSelectViewController.swift */,
+				6D5F52B421864E3800AE82B7 /* RollStatsViewController.swift */,
+			);
+			path = CharacterCreationVCs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,16 +295,16 @@
 				TargetAttributes = {
 					6D6B626C214311DE00ECAD7B = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					6D6B6283214311E000ECAD7B = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = 6D6B626C214311DE00ECAD7B;
 					};
 					6D6B628E214311E000ECAD7B = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = 6D6B626C214311DE00ECAD7B;
 					};
 				};
@@ -268,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D64F90A2273FEDE0062BEAB /* DiceRoll.storyboard in Resources */,
 				6D6B627E214311E000ECAD7B /* LaunchScreen.storyboard in Resources */,
 				6D6B627B214311E000ECAD7B /* Assets.xcassets in Resources */,
 				6D6B6276214311DE00ECAD7B /* Main.storyboard in Resources */,
@@ -297,16 +364,21 @@
 			files = (
 				6D70437F218531F3007614AC /* RollStats.swift in Sources */,
 				6D70438121853213007614AC /* DiceRoll.swift in Sources */,
+				6D74220C2282FE4C0019975C /* DiceRollViewController.swift in Sources */,
 				6D5F52A921854B8A00AE82B7 /* RaceSelectViewController.swift in Sources */,
 				6DB999FE2186588500DC1E9F /* CharacterViewController.swift in Sources */,
 				6D5F52B1218555A700AE82B7 /* Barbarian.swift in Sources */,
+				6D64F9052273C7CA0062BEAB /* ClassENUM.swift in Sources */,
 				6DB99A002186982E00DC1E9F /* skills.swift in Sources */,
+				6D4207E2223085790005329A /* Paladin.swift in Sources */,
 				6D5F52AF2185533B00AE82B7 /* Languages.swift in Sources */,
+				6D74220E228316690019975C /* CharacterPrimaryViewController.swift in Sources */,
 				6D6B6279214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodeld in Sources */,
 				6D70437D21852DEC007614AC /* Character.swift in Sources */,
 				6D5F52B521864E3800AE82B7 /* RollStatsViewController.swift in Sources */,
 				6D70437B21852D2C007614AC /* Races.swift in Sources */,
 				6D6B6271214311DE00ECAD7B /* AppDelegate.swift in Sources */,
+				6D64F9082273CFAE0062BEAB /* testViewController.swift in Sources */,
 				6D5F52AD2185517D00AE82B7 /* Classes.swift in Sources */,
 				6D5F52AB21854CC100AE82B7 /* CharactaerSelectTableViewController.swift in Sources */,
 			);
@@ -489,7 +561,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -506,7 +578,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -525,7 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheetTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dungeons&DragonsCharSheet.app/Dungeons&DragonsCharSheet";
 			};
@@ -545,7 +617,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheetTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dungeons&DragonsCharSheet.app/Dungeons&DragonsCharSheet";
 			};
@@ -564,7 +636,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheetUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Dungeons&DragonsCharSheet";
 			};
@@ -583,7 +655,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Infotech-4425.Dungeons-DragonsCharSheetUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Dungeons&DragonsCharSheet";
 			};

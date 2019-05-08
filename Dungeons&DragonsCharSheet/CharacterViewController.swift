@@ -38,7 +38,9 @@ class CharacterViewController: UIViewController {
     var testString : String = ""
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        /*
         let clas1 = classSelectandCreate(playerClass: playerClass!)
         let player = Character(raceTemp: race!, statBlock: statBlock!, subRaceTemp: subRace)
         getRaceStats(char: player)
@@ -48,9 +50,13 @@ class CharacterViewController: UIViewController {
             testString += String(player.skillArray[x]) + "\n"
         }
         player.playerClasses?.append(clas1)
+        player.transferFromClasses()
+        print(player)
+        print(player.playerClasses![0])
         //player.transferFromClasses()
-        testString += "AC: " + String(clas1.AC)//String(player.playerClasses![0].health)
-        test.text = testString
+       // testString += "AC: " + (String(player.armorClass!))//String(player.playerClasses![0].health)
+       // test.text = testString
+ */
     }
     
     func loadUILabels(player : Character){
@@ -65,11 +71,11 @@ class CharacterViewController: UIViewController {
         classLabel.text = playerClass?.rawValue
         
     }
-    
+   /*
     func classSelectandCreate(playerClass : Class)->Classes{
         switch(playerClass){
         case .BARBARIAN:
-            return Barbarian(level: 1, classEnum: playerClass, statBlock: statBlock!)
+           // return Barbarian(level: 1, classEnum: playerClass, statBlock: statBlock!)
             /*
              case .BARD
              case .CLERIC
@@ -87,8 +93,8 @@ class CharacterViewController: UIViewController {
             return Classes(level: 1, classEnum: playerClass, statBlock: statBlock!)
         }
     }
-    
-    func classSelectandLevel(playerClass : Classes){
+    */
+ /*   func classSelectandLevel(playerClass : Classes){
         switch(playerClass.classEnum){
         case .BARBARIAN:
             playerClass.levelUp()
@@ -110,9 +116,12 @@ class CharacterViewController: UIViewController {
         default :
             return
         }
+ 
     }
-    
-
+    */
+  //  func levelUp(){
+  //      player1.
+ //   }
     /*
     // MARK: - Navigation
 
