@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D23D2332284D8DB00A5C7A9 /* CharacterCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D23D2312284D8DB00A5C7A9 /* CharacterCreation.storyboard */; };
 		6D4207E2223085790005329A /* Paladin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4207E1223085790005329A /* Paladin.swift */; };
 		6D5F52A921854B8A00AE82B7 /* RaceSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52A821854B8A00AE82B7 /* RaceSelectViewController.swift */; };
 		6D5F52AD2185517D00AE82B7 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F52AC2185517D00AE82B7 /* Classes.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D23D2322284D8DB00A5C7A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Dungeons&DragonsCharSheet/Base.lproj/CharacterCreation.storyboard"; sourceTree = "<group>"; };
 		6D4207E1223085790005329A /* Paladin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paladin.swift; sourceTree = "<group>"; };
 		6D5F52A821854B8A00AE82B7 /* RaceSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSelectViewController.swift; sourceTree = "<group>"; };
 		6D5F52AC2185517D00AE82B7 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
@@ -114,6 +116,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D23D2342284D98700A5C7A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D64F9062273CF3C0062BEAB /* DiceANDRolls */,
+				6D64F9012273C7510062BEAB /* CharacterModel */,
+				6D64F9022273C7700062BEAB /* ENUMS */,
+				6D74221C22849B960019975C /* ClassEntityModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6D23D2352284D9BF00A5C7A9 /* Views & Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D6B627C214311E000ECAD7B /* LaunchScreen.storyboard */,
+				6D6B6274214311DE00ECAD7B /* Main.storyboard */,
+				6D74220A2282FDEA0019975C /* CharacterCreation View Controller */,
+				6D7422082282FD8B0019975C /* DiceRollVC&Storyboard */,
+			);
+			path = "Views & Controllers";
+			sourceTree = "<group>";
+		};
 		6D64F9012273C7510062BEAB /* CharacterModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +180,6 @@
 		6D6B6264214311DE00ECAD7B = {
 			isa = PBXGroup;
 			children = (
-				6D74222E2284C6A60019975C /* CharacterSelectTableViewController.swift */,
 				6D74222C2284C0EC0019975C /* DiceRoller.storyboard */,
 				6D6B626F214311DE00ECAD7B /* Dungeons&DragonsCharSheet */,
 				6D6B6287214311E000ECAD7B /* Dungeons&DragonsCharSheetTests */,
@@ -178,18 +201,13 @@
 		6D6B626F214311DE00ECAD7B /* Dungeons&DragonsCharSheet */ = {
 			isa = PBXGroup;
 			children = (
-				6D74221C22849B960019975C /* ClassEntityModel */,
+				6D23D2352284D9BF00A5C7A9 /* Views & Controllers */,
 				6D6B6270214311DE00ECAD7B /* AppDelegate.swift */,
-				6D74220A2282FDEA0019975C /* CharacterCreationVCs */,
-				6D64F9062273CF3C0062BEAB /* DiceANDRolls */,
-				6D64F9022273C7700062BEAB /* ENUMS */,
-				6D64F9012273C7510062BEAB /* CharacterModel */,
-				6D7422082282FD8B0019975C /* DiceRollVC&Storyboard */,
-				6D6B6274214311DE00ECAD7B /* Main.storyboard */,
+				6D74222E2284C6A60019975C /* CharacterSelectTableViewController.swift */,
 				6D74220D228316690019975C /* CharacterPrimaryViewController.swift */,
 				6DB999FD2186588500DC1E9F /* CharacterViewController.swift */,
+				6D23D2342284D98700A5C7A9 /* Models */,
 				6D6B627A214311E000ECAD7B /* Assets.xcassets */,
-				6D6B627C214311E000ECAD7B /* LaunchScreen.storyboard */,
 				6D6B627F214311E000ECAD7B /* Info.plist */,
 				6D6B6277214311DE00ECAD7B /* Dungeons_DragonsCharSheet.xcdatamodeld */,
 			);
@@ -223,13 +241,14 @@
 			path = "DiceRollVC&Storyboard";
 			sourceTree = "<group>";
 		};
-		6D74220A2282FDEA0019975C /* CharacterCreationVCs */ = {
+		6D74220A2282FDEA0019975C /* CharacterCreation View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6D23D2312284D8DB00A5C7A9 /* CharacterCreation.storyboard */,
 				6D5F52A821854B8A00AE82B7 /* RaceSelectViewController.swift */,
 				6D5F52B421864E3800AE82B7 /* RollStatsViewController.swift */,
 			);
-			path = CharacterCreationVCs;
+			path = "CharacterCreation View Controller";
 			sourceTree = "<group>";
 		};
 		6D74221C22849B960019975C /* ClassEntityModel */ = {
@@ -351,6 +370,7 @@
 				6D64F90A2273FEDE0062BEAB /* DiceRoll.storyboard in Resources */,
 				6D6B627E214311E000ECAD7B /* LaunchScreen.storyboard in Resources */,
 				6D6B627B214311E000ECAD7B /* Assets.xcassets in Resources */,
+				6D23D2332284D8DB00A5C7A9 /* CharacterCreation.storyboard in Resources */,
 				6D6B6276214311DE00ECAD7B /* Main.storyboard in Resources */,
 				6D74222D2284C0EC0019975C /* DiceRoller.storyboard in Resources */,
 			);
@@ -432,6 +452,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6D23D2312284D8DB00A5C7A9 /* CharacterCreation.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D23D2322284D8DB00A5C7A9 /* Base */,
+			);
+			name = CharacterCreation.storyboard;
+			sourceTree = "<group>";
+		};
 		6D6B6274214311DE00ECAD7B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

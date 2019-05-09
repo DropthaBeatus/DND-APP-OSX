@@ -28,9 +28,14 @@ class RollStatsViewController: UIViewController {
     var race : Race?
     var subRace : String?
     var playerClass : Class?
+    var playerName : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playerClass = .BARBARIAN
+        race = .DWARF
+        subRace = "Hill"
+        playerName = "Bobby da Barbarian"
         //LabelArr = [strLabel, dexLabel, constLabel, intLabel, wisLabel, chaLabel]
         // Do any additional setup after loading the view.
         rollStats(1)
@@ -42,12 +47,29 @@ class RollStatsViewController: UIViewController {
         for x in 0...statBlock!.count-1{
             LabelArr?[x].text = String(statBlock![x])
         }
-        
-
-        
     }
     
     @IBAction func `continue`(_ sender: Any) {
+
+        playerName = playerName!.trimmingCharacters(in: .whitespaces)
+        let ClassCreation = returnSpecificClass(className: playerClass!.rawValue, levelTemp: 1, statBlockTemp: statBlock!, RaceTemp: race!, subRaceTemp: subRace, name : playerName!)
+
+        let playerSaveData = ClassEnt(playClass: ClassCreation, className: playerClass!.rawValue, subClass: nil)
+        
+        if let playerSaveData = playerSaveData {
+            do {
+                let managedContext = playerSaveData.managedObjectContext
+                try managedContext?.save()
+            } catch {
+                alertNotifyUser(message: "The document context could not be saved.")
+            }
+        }
+        else{
+                alertNotifyUser(message: "The document could not be created.")
+        }
+        
+        navigationController?.popViewController(animated: true)
+        /*
         let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CharacterViewController") as! CharacterViewController
         
         popvc.race = race
@@ -59,6 +81,8 @@ class RollStatsViewController: UIViewController {
         popvc.view.frame = self.view.frame
         self.view.addSubview(popvc.view)
         popvc.didMove(toParent: self)
+ */
+        
         
     }
     func showAnimate()
@@ -84,6 +108,13 @@ class RollStatsViewController: UIViewController {
                 self.removeFromParent()
             }
         })
+    }
+    
+    func alertNotifyUser(message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 

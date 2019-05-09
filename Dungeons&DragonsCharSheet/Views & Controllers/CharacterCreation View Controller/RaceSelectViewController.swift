@@ -11,6 +11,8 @@ import UIKit
 class RaceSelectViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var RacePicker: UIPickerView!
+    @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var NameTextField: UITextField!
     
     
     let classesArr : [Class] = getAllClasses()
@@ -107,7 +109,7 @@ class RaceSelectViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     @IBAction func selectBTN(_ sender: Any) {
         subRaceArr = SubRace(race : choosenRace!)
-        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RollStatsViewController") as! RollStatsViewController
+        let popvc = UIStoryboard(name: "CharacterCreation", bundle: nil).instantiateViewController(withIdentifier: "RollStatsViewController") as! RollStatsViewController
         
         
         if( subRaceArr == nil && choosenSubRace == nil && choosenClass == nil){
@@ -122,16 +124,28 @@ class RaceSelectViewController: UIViewController, UIPickerViewDataSource, UIPick
             RacePicker.reloadAllComponents()
         }
         else if(choosenClass != nil){
-            //will need to segue instead of pop
-            popvc.race = choosenRace
-            popvc.subRace = choosenSubRace
-            popvc.playerClass = choosenClass
-            //navigationController?.pushViewController(popvc, animated: true)
-            self.addChild(popvc)
-            popvc.view.frame = self.view.frame
-            self.view.addSubview(popvc.view)
-            popvc.didMove(toParent: self)
-            
+            if(NameTextField.text == "" || NameTextField.text == nil){
+                print("working!")
+                let alertController = UIAlertController(title: "Name Needed!", message:
+                    "Please Enter a name for your new Adventurer", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
+            else{
+                print("not working!")
+                //will need to segue instead of pop
+                
+                popvc.race = choosenRace
+                popvc.subRace = choosenSubRace
+                popvc.playerClass = choosenClass
+                popvc.playerName = NameTextField.text! //navigationController?.pushViewController(popvc, animated: true)
+                self.addChild(popvc)
+                popvc.view.frame = self.view.frame
+                self.view.addSubview(popvc.view)
+                popvc.didMove(toParent: self)
+
+            }
             
         }
     }
