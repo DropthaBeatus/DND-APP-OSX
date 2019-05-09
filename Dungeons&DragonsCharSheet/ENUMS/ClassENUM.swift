@@ -21,22 +21,23 @@ enum Class : String, CaseIterable{
     case SORCERER = "Sorcerer"
     case WARLOCK = "Warlock"
     case WIZARD = "Wizard"
+    case GENERIC = "Generic"
     
-    init?(id : Int) {
+    init?(id : String) {
         switch id {
-        case 1: self = .BARBARIAN
-        case 2: self = .BARD
-        case 3: self = .CLERIC
-        case 4: self = .DRUID
-        case 5: self = .FIGHTER
-        case 6: self = .MONK
-        case 7: self = .PALADIN
-        case 8: self = .RANGER
-        case 9: self = .ROUGE
-        case 10: self = .SORCERER
-        case 11: self = .WARLOCK
-        case 12: self = .WIZARD
-        default: return nil
+        case "Barbarian": self = .BARBARIAN
+        case "Bard": self = .BARD
+        case "Cleric": self = .CLERIC
+        case "Druid": self = .DRUID
+        case "Fighter": self = .FIGHTER
+        case "Monk": self = .MONK
+        case "Paladin": self = .PALADIN
+        case "Ranger": self = .RANGER
+        case "Rouge": self = .ROUGE
+        case "Sorcerer": self = .SORCERER
+        case "Warlock": self = .WARLOCK
+        case "Wizard": self = .WIZARD
+        default: self = .GENERIC
         }
     }
 }
@@ -49,3 +50,38 @@ func getAllClasses()->[Class]{
     }
     return temp
 }
+
+func returnSpecificClass(className : String, levelTemp: Int, statBlockTemp: [Int], RaceTemp : Race, subRaceTemp: String?, name : String)->Classes{
+    //let tempCase = Class.init(id: className)
+    switch(className){
+        case "Barbarian":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        case "Bard":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        case "Cleric":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        case "Druid":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        case "Fighter":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        case "Monk":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        case "Paladin":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        case "Ranger":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        case "Rouge":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        case "Sorcerer":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        case "Warlock":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        case "Wizard":
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        default:
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+        }
+    
+}
+    
+

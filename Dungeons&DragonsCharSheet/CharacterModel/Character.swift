@@ -49,7 +49,7 @@ var statArray : [Int] = [0,0,0,0,0,0]/*{
         
         name = nameTemp
         race = raceTemp
-        raceStruct = getRaceStats(raceTemp)
+        raceStruct = getRaceStats(raceTemp.rawValue)
         subRace = subRaceTemp
         var tempBlock = [Int]()
         var x = 0

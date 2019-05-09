@@ -30,6 +30,8 @@ class Classes : Character{
     var wisModSave : Int = 0
     var chaModSave : Int = 0
     
+    var className = Class.init(id: "Generic")
+    
     init(level : Int, statBlock: [Int], raceTemp : Race, subRaceTemp : String?, nameTemp : String){
         super.init(raceTemp: raceTemp, statBlock: statBlock, subRaceTemp: subRaceTemp, nameTemp: nameTemp)
         //playerLevel = level

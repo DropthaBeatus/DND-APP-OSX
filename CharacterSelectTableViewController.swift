@@ -1,19 +1,15 @@
 //
-//  CharactaerSelectTableViewController.swift
+//  CharacterSelectTableViewController.swift
 //  Dungeons&DragonsCharSheet
 //
-//  Created by Liam Flaherty on 10/27/18.
-//  Copyright © 2018 Liam Flaherty. All rights reserved.
+//  Created by Liam Flaherty on 5/9/19.
+//  Copyright © 2019 Liam Flaherty. All rights reserved.
 //
 
 import UIKit
 
-class CharactaerSelectTableViewController: UITableViewController {
+class CharacterSelectTableViewController: UITableViewController {
 
-    var createCharRace : Race?
-    var createCharSubRace : String?
-    var createCharStats : [Int]?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +24,7 @@ class CharactaerSelectTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,7 +52,7 @@ class CharactaerSelectTableViewController: UITableViewController {
 
     /*
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -90,16 +86,5 @@ class CharactaerSelectTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func addCharacter(_ sender: Any) {
-        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RaceSelectViewController")
-        
-        self.addChild(popvc)
-        
-        popvc.view.frame = self.view.frame
-        
-        self.view.addSubview(popvc.view)
-        
-        popvc.didMove(toParent: self)
-    }
-    
+
 }

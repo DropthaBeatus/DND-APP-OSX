@@ -12,6 +12,7 @@ class RaceSelectViewController: UIViewController, UIPickerViewDataSource, UIPick
 
     @IBOutlet weak var RacePicker: UIPickerView!
     
+    
     let classesArr : [Class] = getAllClasses()
     let racesArr : [Race] = getAllRaces()
     var choosenRace : Race?
@@ -104,7 +105,7 @@ class RaceSelectViewController: UIViewController, UIPickerViewDataSource, UIPick
         })
     }
     
-    @IBAction func selectRace(_ sender: Any) {
+    @IBAction func selectBTN(_ sender: Any) {
         subRaceArr = SubRace(race : choosenRace!)
         let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RollStatsViewController") as! RollStatsViewController
         
@@ -126,13 +127,14 @@ class RaceSelectViewController: UIViewController, UIPickerViewDataSource, UIPick
             popvc.subRace = choosenSubRace
             popvc.playerClass = choosenClass
             //navigationController?.pushViewController(popvc, animated: true)
-             self.addChild(popvc)
-             popvc.view.frame = self.view.frame
-             self.view.addSubview(popvc.view)
-             popvc.didMove(toParent: self)
- 
+            self.addChild(popvc)
+            popvc.view.frame = self.view.frame
+            self.view.addSubview(popvc.view)
+            popvc.didMove(toParent: self)
+            
             
         }
     }
+    
     
 }

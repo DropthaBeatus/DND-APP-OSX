@@ -18,11 +18,18 @@ class Barbarian : Classes {
     //will obvisouly need to implement more here
     override init(level levelT : Int, statBlock statBlockT: [Int], raceTemp raceTempT : Race, subRaceTemp subRaceTempT : String?, nameTemp: String){
         super.init(level: levelT, statBlock: statBlockT, raceTemp: raceTempT, subRaceTemp: subRaceTempT, nameTemp: nameTemp)
+        super.className = Class.init(id: "Barbarian")
         
-        classDescription.append("Rage : On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor: You have advantage on all Strength checks and Strength saving throws. When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.You have resistance to bludgeoning, piercing, and slashing damage.If you are able to cast spells, you can't cast them or concentrate on them while raging. Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action. Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again. ")
+        classDescription.append("Rage : On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor: You have advantage on all Strength checks and Strength saving throws. When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.You have resistance to bludgeoning, piercing, and slashing damage.If you are able to cast spells, you can't cast them or concentrate on them while raging. Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action. Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.\n\n")
         
         super.health = self.constMod + 12
         unarmoredDefense()
+        var x = 0
+        //include a way to check for approvements to class and subclass here
+        while(x < levelT){
+            levelUp()
+            x += 1
+        }
         //setModSave()
     }
     
@@ -51,8 +58,8 @@ class Barbarian : Classes {
     func prepareLevel(_ level : Int){
         switch(level){
             case 2:
-                classDescription.append("Reckless Attack: When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on all melee weapon attack rolls using Strength during that turn, but attack rolls against you are rolled with advantage until the beginning of your next turn")
-                classDescription.append("Danger Sense : At 2nd level, you have advantage on Dexterity saving throws against effects that you can see, such as traps or spells. You do not gain this benefit if you are blinded, deafened, or incapacitated")
+                classDescription.append("Reckless Attack: When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on all melee weapon attack rolls using Strength during that turn, but attack rolls against you are rolled with advantage until the beginning of your next turn.\n\n")
+                classDescription.append("Danger Sense : At 2nd level, you have advantage on Dexterity saving throws against effects that you can see, such as traps or spells. You do not gain this benefit if you are blinded, deafened, or incapacitated.\n\n")
             case 3:
                 setRageCount("3")
                 //choosePath()
@@ -61,24 +68,24 @@ class Barbarian : Classes {
                 super.needsAbilityImprovement = true
                 super.attackCount = 2
                 classDescription.append("You can attack twice, instead of once, whenever you take the Attack action on your turn.")
-                classDescription.append("Your speed increases by 10 feet while you aren't wearing heavy armor. ")
+                classDescription.append("Your speed increases by 10 feet while you aren't wearing heavy armor.\n\n")
             case 5:
                 setProfBonus(3)
             case 6:
                 setRageCount("4")
                 levelPath(path: .ANCESTRAL)
             case 7:
-                classDescription.append("Feral Instinct: You have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.")
+                classDescription.append("Feral Instinct: You have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.\n\n")
             case 8:
                 super.needsAbilityImprovement = true
             case 9:
-                classDescription.append("Brutal Attack: you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.This increases to two additional dice at 13th level and three additional dice at 17th level. ")
+                classDescription.append("Brutal Attack: you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.This increases to two additional dice at 13th level and three additional dice at 17th level.\n\n")
                 setRageDamage(3)
                 setProfBonus(4)
             case 10:
                 levelPath(path: .ANCESTRAL)
             case 11:
-                classDescription.append("Relentless Rage: if you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead. Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.")
+                classDescription.append("Relentless Rage: if you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead. Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.\n\n")
             case 12:
                 super.needsAbilityImprovement = true
                 setRageCount("5")
@@ -88,7 +95,7 @@ class Barbarian : Classes {
             case 14:
                 levelPath(path: .ANCESTRAL)
             case 15:
-                classDescription.append("Persistent Rage: Your rage ends early only if you fall unconscious or if you choose to end it.")
+                classDescription.append("Persistent Rage: Your rage ends early only if you fall unconscious or if you choose to end it.\n\n")
             case 16:
                 super.needsAbilityImprovement = true
                 setRageDamage(4)
@@ -96,7 +103,7 @@ class Barbarian : Classes {
                 setRageCount("6")
                 setProfBonus(6)
             case 18:
-                classDescription.append("Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.")
+                classDescription.append("Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.\n\n")
             case 19:
                 super.needsAbilityImprovement = true
             case 20:
@@ -160,35 +167,44 @@ class Barbarian : Classes {
         case .ANCESTRAL :
             switch(self.playerLevel){
                 case 6:
-                    classDescription.append("Spirit Shield: If you are raging and another creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by 2d6. When you reach certain levels in this class, you can reduce the damage by more: by 3d6 at 10th level and by 4d6 at 14th level.")
+                    classDescription.append("Spirit Shield: If you are raging and another creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by 2d6. When you reach certain levels in this class, you can reduce the damage by more: by 3d6 at 10th level and by 4d6 at 14th level.\n\n")
+                        fallthrough
                 case 10:
-                    classDescription.append("Consult the Spirits: You cast the Augury or Clairvoyance spell, without using a spell slot or material components. Rather than creating a spherical sensor, it invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells. After you cast either spell in this way, you can't use this feature again until you finish a short or long rest.")
+                    classDescription.append("Consult the Spirits: You cast the Augury or Clairvoyance spell, without using a spell slot or material components. Rather than creating a spherical sensor, it invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells. After you cast either spell in this way, you can't use this feature again until you finish a short or long rest.\n\n")
+                        fallthrough
                 case 14:
-                    classDescription.append("Vengeful Ancestors: At 14th level, when you use your Spirit Shield to reduce the damage of an attack, the attacker takes an amount of force damage equal to the damage that your Spirit Shield prevents")
+                    classDescription.append("Vengeful Ancestors: At 14th level, when you use your Spirit Shield to reduce the damage of an attack, the attacker takes an amount of force damage equal to the damage that your Spirit Shield prevents.\n\n")
+                        fallthrough
                 default :
-                    classDescription.append("Ancestral Protectors: While you're raging, the first creature you hit with an attack on your turn becomes the target of spiritual warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage dealt by the attack. The effect on the target ends early if your rage ends.")
+                    classDescription.append("Ancestral Protectors: While you're raging, the first creature you hit with an attack on your turn becomes the target of spiritual warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage dealt by the attack. The effect on the target ends early if your rage ends.\n\n")
             }
         case .BATTLERAGER :
             switch(self.playerLevel){
             case 6:
-                classDescription.append("Reckless Abadon: Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish when your rage ends.")
+                classDescription.append("Reckless Abadon: Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish when your rage ends.\n\n")
+                    fallthrough
             case 10:
-                classDescription.append("Battlerager Charge: You can take the Dash action as a bonus action while raging.")
+                classDescription.append("Battlerager Charge: You can take the Dash action as a bonus action while raging.\n\n")
+                    fallthrough
             case 14:
-                classDescription.append("Spiked Retribution: When a creature within 5 feet of you hits you with a melee attack, the attacker takes 3 piercing damage if you are raging, aren't incapacitated, and are wearing spiked armor.")
+                classDescription.append("Spiked Retribution: When a creature within 5 feet of you hits you with a melee attack, the attacker takes 3 piercing damage if you are raging, aren't incapacitated, and are wearing spiked armor.\n\n")
+                    fallthrough
             default :
-                classDescription.append("Battlerager Armor: You gain the ability to use Spiked Armor as a weapon. While you are wearing spiked armor and are raging, you can use a bonus action to make one melee weapon attack with your armor spikes against a target within 5 feet of you. If the attack hits, the spikes deal 1d4 piercing damage. You use your Strength modifier for the attack and damage rolls. Additionally, when you use the Attack action to grapple a creature, the target takes 3 piercing damage if your grapple check succeeds.")
+                classDescription.append("Battlerager Armor: You gain the ability to use Spiked Armor as a weapon. While you are wearing spiked armor and are raging, you can use a bonus action to make one melee weapon attack with your armor spikes against a target within 5 feet of you. If the attack hits, the spikes deal 1d4 piercing damage. You use your Strength modifier for the attack and damage rolls. Additionally, when you use the Attack action to grapple a creature, the target takes 3 piercing damage if your grapple check succeeds.\n\n")
             }
         case .BESERKER :
             switch(self.playerLevel){
             case 6:
-                classDescription.append("Mindless Rage: You can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage")
+                classDescription.append("Mindless Rage: You can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.\n\n")
+                    fallthrough
             case 10:
-                classDescription.append("Intimidating Presence: You can use your action to frighten someone. Choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you. If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours.")
+                classDescription.append("Intimidating Presence: You can use your action to frighten someone. Choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you. If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours.\n\n")
+                    fallthrough
             case 14:
-                classDescription.append("Retaliation: When you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature. ")
+                classDescription.append("Retaliation: When you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature.\n\n")
+                    fallthrough
             default :
-                classDescription.append("Frenzy: you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When the rage ends you gain one level of exhaustion.")
+                classDescription.append("Frenzy: you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When the rage ends you gain one level of exhaustion.\n\n")
             }
 
         default : return

@@ -16,15 +16,14 @@ enum Race : String, CaseIterable{
     case GNOME = "Gnome"
     case ELF = "Elf"
 
-    init?(id : Int) {
+    init(id : String) {
         switch id {
-        case 1: self = .HUMAN
-        case 2: self = .DWARF
-        case 3: self = .HALFLING
-        case 4: self = .TEIFLING
-        case 5: self = .GNOME
-        case 6: self = .ELF
-        default: return nil
+        case "Dwarf": self = .DWARF
+        case "Halfling": self = .HALFLING
+        case "Teifling": self = .TEIFLING
+        case "Gnome": self = .GNOME
+        case "Elf": self = .ELF
+        default: self = .HUMAN
         }
     }
 }
@@ -36,12 +35,14 @@ struct RaceStruct{
     var languageCap : Int
     var statArrayRaceBonus : [Int]
     var nonStatBonus : [String]?
-    init(languages: [Language], speed : Int, languageCap : Int, statArray : [Int], nonStatBonus : [String]?) {
+    var raceName : String
+    init(languages: [Language], speed : Int, languageCap : Int, statArray : [Int], nonStatBonus : [String]?, raceName: String) {
         self.languages = languages
         self.speed = speed
         self.languageCap = languageCap
         self.statArrayRaceBonus = statArray
         self.nonStatBonus = nonStatBonus
+        self.raceName = raceName
     }
 }
 
@@ -73,46 +74,48 @@ func getAllRaces()->[Race]{
     return temp
 }
 
-func getRaceStats(_ race: Race)-> RaceStruct{
+//func getRaceStats(_ race: Race)-> RaceStruct{
+func getRaceStats(_ race: String)-> RaceStruct{
         //array goes in order as : strenght, dexterity, constitution, intelligence, wisdom, charisma
         //ALWAYS ALWAYS INCREMENT languageCapacity AFTER APPENDING INIATE LANGUAGES!!!!!
         switch(race){
             
             //quick note only doing stats additions, vision, languages and speed for now
-            
-            case .HUMAN:
-                let statBonus = [1,1,1,1,1,1]
-                let raceStruct = RaceStruct(languages: [.COMMON], speed: 30, languageCap: 3, statArray: statBonus, nonStatBonus: nil)
-                return raceStruct
-            
-            case .DWARF:
+
+            case "Dwarf":
                 let statBonus = [0,0,2,0,0,0]
-                let raceStruct = RaceStruct(languages: [.COMMON,.DWARVISH], speed: 25, languageCap: 3, statArray: statBonus, nonStatBonus: ["Darkvision"])
+                let raceStruct = RaceStruct(languages: [.COMMON,.DWARVISH], speed: 25, languageCap: 3, statArray: statBonus, nonStatBonus: ["Darkvision"], raceName: race)
                 return raceStruct
             
-            case .ELF:
+            case "Elf":
                 let statBonus = [0,2,0,0,0,0]
-                let raceStruct = RaceStruct(languages: [.COMMON, .ELVISH], speed: 30, languageCap: 3, statArray: statBonus, nonStatBonus: ["Darkvision"])
+                let raceStruct = RaceStruct(languages: [.COMMON, .ELVISH], speed: 30, languageCap: 3, statArray: statBonus, nonStatBonus: ["Darkvision"], raceName: race)
                 return raceStruct
             
-            case .GNOME:
+            case "Gnome":
                 let statBonus = [0,0,0,2,0,0]
-                let raceStruct = RaceStruct(languages: [.COMMON, .GNOMISH], speed: 25, languageCap: 3, statArray: statBonus, nonStatBonus: ["Darkvision"])
+                let raceStruct = RaceStruct(languages: [.COMMON, .GNOMISH], speed: 25, languageCap: 3, statArray: statBonus, nonStatBonus: ["Darkvision"], raceName: race)
                 return raceStruct
             
-            case .TEIFLING:
+            case "Teifling":
                 let statBonus = [0,0,0,1,0,2]
-                let raceStruct = RaceStruct(languages: [.COMMON, .ABYSSAL], speed: 30, languageCap: 3, statArray: statBonus, nonStatBonus: ["Darkvision"])
+                let raceStruct = RaceStruct(languages: [.COMMON, .ABYSSAL], speed: 30, languageCap: 3, statArray: statBonus, nonStatBonus: ["Darkvision"], raceName: race)
                 return raceStruct
             
-            case .HALFLING:
+            case "Halfling":
                 let statBonus = [0,0,0,2,0,0]
-                let raceStruct = RaceStruct(languages: [.COMMON,.HALFLING], speed: 25, languageCap: 3, statArray: statBonus, nonStatBonus: nil)
+                let raceStruct = RaceStruct(languages: [.COMMON,.HALFLING], speed: 25, languageCap: 3, statArray: statBonus, nonStatBonus: nil, raceName: race)
                 return raceStruct
-    }
+            
+            
+            default:
+                let statBonus = [1,1,1,1,1,1]
+                let raceStruct = RaceStruct(languages: [.COMMON], speed: 30, languageCap: 3, statArray: statBonus, nonStatBonus: nil, raceName: race)
+                return raceStruct
            // default:
             //    print("Error")
         
+            }
 }
 
 
