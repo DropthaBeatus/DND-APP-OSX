@@ -5,10 +5,20 @@ Meant to be a character creation application for DND characters.
 
 Features: 
 
-- All Basic character creation formats including Race, SubRace, Background, Class and Stat Rollings.
+- All Basic character creation formats including Race, Class and Stat Rollings. (Excluded Background and SubRace At the moment)
 
-- Implement multiclassing(will need to find to economically iterate through all 12 classes if player chooses to multiclass all classes)
+- Implement dice roller for all your dice rolling needs
 
-- Implement Weapons, Items, Currency, and Armor
+- Implements Druid, Paladin, and Barbarian!(More to come)
 
-- Implement Attack Rolls and Save Rolls 
+- Saves character data to Core Data
+
+- Will implement choice to pick sub class
+
+-More to come
+
+-Dynamic UI Practice
+
+-Page View Implementation
+
+
