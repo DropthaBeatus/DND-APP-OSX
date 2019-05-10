@@ -11,6 +11,8 @@ import UIKit
 class CharacterTableViewCell: UITableViewCell {
 
     @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var classLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

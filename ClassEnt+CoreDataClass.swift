@@ -25,7 +25,7 @@ public class ClassEnt: NSManagedObject {
     
     var savedClass : Classes{
         get{
-            let tempClass = returnSpecificClass(className: classDNDName!, levelTemp: Int(playerLevel), statBlockTemp: statArraySav, RaceTemp: Race.init(id: raceString!), subRaceTemp: subRaceString, name : name!)
+            let tempClass = returnSpecificClass(className: classDNDName!, levelTemp: Int(playerLevel), statBlockTemp: statArraySav, RaceTemp: Race.init(id: raceString!), subRaceTemp: subRaceString, name : name!, health: Int(maxHealth))
             return tempClass
         }
         set{
@@ -87,23 +87,15 @@ public class ClassEnt: NSManagedObject {
         } else {
             self.subRaceString = "none"
         }
-        
         self.savedClass = playClass
         
     }
     
     func update(playClass : Classes, className : String?, subClass : String?) {
         self.playerLevel = Int16(playClass.playerLevel)
-        self.ac = Int16(playClass.AC)
+        self.statArraySav = playClass.statArray
+        self.savedClass = playClass
         
-        self.strength = Int16(playClass.skillArray[0])
-        self.dexterity = Int16(playClass.skillArray[1])
-        self.constitution = Int16(playClass.skillArray[2])
-        self.intelligence = Int16(playClass.skillArray[3])
-        self.wisdom = Int16(playClass.skillArray[4])
-        self.charisma = Int16(playClass.skillArray[5])
-        
-        self.maxHealth = Int16(playClass.health)
         
         if let subClassName =  subClass{
             self.subClassDNDName = subClassName

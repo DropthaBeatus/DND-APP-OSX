@@ -47,7 +47,7 @@ class RollStatsViewController: UIViewController {
 
         
         playerName = playerName!.trimmingCharacters(in: .whitespaces)
-        let ClassCreation = returnSpecificClass(className: playerClass!.rawValue, levelTemp: 1, statBlockTemp: statBlock!, RaceTemp: race!, subRaceTemp: subRace, name : playerName!)
+        let ClassCreation = returnSpecificClass(className: playerClass!.rawValue, levelTemp: 1, statBlockTemp: statBlock!, RaceTemp: race!, subRaceTemp: subRace, name : playerName!, health: nil)
         
         print()
         let playerSaveData = ClassEnt(playClass: ClassCreation, className: playerClass!.rawValue, subClass: nil)

@@ -34,10 +34,6 @@ class Classes : Character{
     
     init(level : Int, statBlock: [Int], raceTemp : Race, subRaceTemp : String?, nameTemp : String){
         super.init(raceTemp: raceTemp, statBlock: statBlock, subRaceTemp: subRaceTemp, nameTemp: nameTemp)
-        //playerLevel = level
-        //statArray = statBlock
-        //should be overriden
-        //make sure to check
         setModSave()
     }
     
@@ -48,8 +44,6 @@ class Classes : Character{
     func abilityScoreImprovement(location : Int, addition : Int){
         statArray[location] = statArray[location] + addition
         updateAllStats()
-        //should be overriden
-        //make sure to check
         setModSave()
         needsAbilityImprovement = false
     }

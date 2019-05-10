@@ -40,23 +40,47 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABJ-wP-IaM">
-                                                    <rect key="frame" x="27" y="4" width="178" height="61.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="178" id="k4A-Vk-R4Q"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="27" y="4" width="163" height="61.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGi-IH-ICU">
+                                                    <rect key="frame" x="198" y="11" width="162" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtW-5z-pqE">
+                                                    <rect key="frame" x="198" y="38" width="168" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="vtW-5z-pqE" firstAttribute="bottom" secondItem="aGH-wX-707" secondAttribute="bottomMargin" id="39n-vX-PQk"/>
                                                 <constraint firstItem="ABJ-wP-IaM" firstAttribute="centerY" secondItem="aGH-wX-707" secondAttribute="centerY" id="Gqe-Nw-Pth"/>
+                                                <constraint firstItem="vtW-5z-pqE" firstAttribute="leading" secondItem="aGH-wX-707" secondAttribute="leading" constant="198" id="Ipr-lP-64B"/>
                                                 <constraint firstItem="ABJ-wP-IaM" firstAttribute="leading" secondItem="aGH-wX-707" secondAttribute="leadingMargin" constant="12" id="KmD-Q4-q0s"/>
+                                                <constraint firstAttribute="trailing" secondItem="mGi-IH-ICU" secondAttribute="trailing" constant="15" id="LV8-rn-dPr"/>
                                                 <constraint firstItem="ABJ-wP-IaM" firstAttribute="top" secondItem="aGH-wX-707" secondAttribute="topMargin" constant="-7" id="Ont-7M-hVj"/>
+                                                <constraint firstAttribute="trailing" secondItem="vtW-5z-pqE" secondAttribute="trailing" constant="9" id="Ot3-mg-RIM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mGi-IH-ICU" secondAttribute="trailing" id="RBz-mh-GYo"/>
+                                                <constraint firstItem="mGi-IH-ICU" firstAttribute="leading" secondItem="vtW-5z-pqE" secondAttribute="leading" id="SHp-IC-p2c"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vtW-5z-pqE" secondAttribute="trailing" constant="-6" id="TG2-U5-WPL"/>
+                                                <constraint firstItem="ABJ-wP-IaM" firstAttribute="leading" secondItem="aGH-wX-707" secondAttribute="leading" constant="27" id="TrH-tY-awy"/>
+                                                <constraint firstItem="mGi-IH-ICU" firstAttribute="leading" secondItem="ABJ-wP-IaM" secondAttribute="trailing" constant="8" id="bDG-2t-8nU"/>
+                                                <constraint firstItem="mGi-IH-ICU" firstAttribute="leading" secondItem="aGH-wX-707" secondAttribute="leading" constant="198" id="nAS-QU-6Ga"/>
+                                                <constraint firstItem="vtW-5z-pqE" firstAttribute="leading" secondItem="ABJ-wP-IaM" secondAttribute="trailing" constant="8" id="olT-fu-xD7"/>
+                                                <constraint firstItem="vtW-5z-pqE" firstAttribute="top" secondItem="mGi-IH-ICU" secondAttribute="bottom" constant="6" id="sqr-Pd-bJs"/>
+                                                <constraint firstAttribute="trailing" secondItem="ABJ-wP-IaM" secondAttribute="trailing" constant="185" id="tza-I5-pMR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="NameLabel" destination="ABJ-wP-IaM" id="GG7-2a-8Vc"/>
+                                            <outlet property="classLabel" destination="vtW-5z-pqE" id="h72-gf-8rc"/>
+                                            <outlet property="levelLabel" destination="mGi-IH-ICU" id="l4N-dW-Ddw"/>
                                             <segue destination="ed8-Zm-BkR" kind="show" identifier="Push" id="E0l-LI-rx4"/>
                                         </connections>
                                     </tableViewCell>

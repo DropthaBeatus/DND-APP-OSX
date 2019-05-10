@@ -47,17 +47,27 @@ class CharacterPageViewController: UIPageViewController, UIPageViewControllerDel
         switch(playerClass?.className!.rawValue){
                 case "Barbarian":
                     let classP = playerClass as! Barbarian
-                    first.playerClass = playerClass
+                    first.playerClass = classP
                     second.AC = classP.AC
                     second.ProfBonus = classP.profBonus
                     second.skillNum = classP.skillArray
                     third.infotext = classP.classDescription
+                    third.character = character
+                    third.playerClass = classP
                   //  for block in classP.classDescription{
                    //     third.block
                    // }
                // case "Bard":
                // case "Cleric":
-               // case "Druid":
+               case "Druid":
+                    let classP = playerClass as! Druid
+                    first.playerClass = playerClass
+                    second.AC = classP.AC
+                    second.ProfBonus = classP.profBonus
+                    second.skillNum = classP.skillArray
+                    third.infotext = classP.classDescription
+                    third.character = character
+                    third.playerClass = classP
                // case "Fighter":
                // case "Monk":
                 case "Paladin":
@@ -67,6 +77,8 @@ class CharacterPageViewController: UIPageViewController, UIPageViewControllerDel
                     second.ProfBonus = classP.profBonus
                     second.skillNum = classP.skillArray
                     third.infotext = classP.classDescription
+                    third.character = character
+                    third.playerClass = classP
               //  case "Ranger":
                // case "Rouge":
               //  case "Sorcerer":

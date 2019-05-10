@@ -42,7 +42,14 @@ enum Class : String, CaseIterable{
     }
 }
 
-
+func getAllClasses()->[Class]{
+    var temp : [Class] = []
+        temp.append(.BARBARIAN)
+        temp.append(.PALADIN)
+        temp.append(.DRUID)
+    return temp
+}
+/*
 func getAllClasses()->[Class]{
     var temp : [Class] = []
     for classDND in Class.allCases{
@@ -50,36 +57,36 @@ func getAllClasses()->[Class]{
     }
     return temp
 }
-
-func returnSpecificClass(className : String, levelTemp: Int, statBlockTemp: [Int], RaceTemp : Race, subRaceTemp: String?, name : String)->Classes{
+*/
+func returnSpecificClass(className : String, levelTemp: Int, statBlockTemp: [Int], RaceTemp : Race, subRaceTemp: String?, name : String, health : Int?)->Classes{
     //let tempCase = Class.init(id: className)
     switch(className){
         case "Barbarian":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         case "Bard":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         case "Cleric":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         case "Druid":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Druid.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         case "Fighter":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         case "Monk":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         case "Paladin":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Paladin.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         case "Ranger":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         case "Rouge":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         case "Sorcerer":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         case "Warlock":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         case "Wizard":
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         default:
-            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name)
+            return Barbarian.init(level: levelTemp, statBlock: statBlockTemp, raceTemp: RaceTemp, subRaceTemp: subRaceTemp, nameTemp: name, health : health)
         }
     
 }

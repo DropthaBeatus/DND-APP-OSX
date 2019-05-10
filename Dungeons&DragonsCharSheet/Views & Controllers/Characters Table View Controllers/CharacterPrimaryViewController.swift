@@ -50,7 +50,8 @@ class CharacterPrimaryViewController: UIViewController, UITableViewDelegate, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CharacterTableViewCell
         cell.NameLabel.text = docData[indexPath.row].name!
-        
+        cell.levelLabel.text = "Level: " + String(docData[indexPath.row].playerLevel)
+        cell.classLabel.text = "Class: " + docData[indexPath.row].classDNDName!
         return cell
     }
     

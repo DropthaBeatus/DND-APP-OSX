@@ -20,7 +20,6 @@ class FirstCharViewController: UIViewController, UITableViewDelegate, UITableVie
     var playerClass : Classes?
     var saveArr = [Int]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.statTableView.delegate = self

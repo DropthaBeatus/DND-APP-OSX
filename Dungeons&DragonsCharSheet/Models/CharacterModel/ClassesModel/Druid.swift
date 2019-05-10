@@ -8,23 +8,26 @@
 
 import Foundation
 
-class Druid : Classes{
-    
-    var DivineSence : Int = 1
-    var LayOnHands : Int = 1
+class Druid : Classes {
+
     var path : druPath?
     var classDescription = [String]()
     
-    override init(level levelT : Int, statBlock statBlockT: [Int], raceTemp raceTempT : Race, subRaceTemp subRaceTempT : String?, nameTemp: String){
-        super.init(level: levelT, statBlock: statBlockT, raceTemp: raceTempT, subRaceTemp: subRaceTempT, nameTemp: nameTemp)
-        super.className = Class.init(id: "Paladin")
+    init(level : Int, statBlock statBlockT: [Int], raceTemp raceTempT : Race, subRaceTemp subRaceTempT : String?, nameTemp: String, health : Int?){
+        super.init(level: level, statBlock: statBlockT, raceTemp: raceTempT, subRaceTemp: subRaceTempT, nameTemp: nameTemp)
+        super.className = Class.init(id: "Druid")
         
-        classDescription.append("Divine Sense - As an action, until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type of any being whose presence you sense, but not its identity. Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated. You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.\n\n")
-        classDescription.append("Lay On Hands - You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level x 5. As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool. Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one. This feature has no effect on undead and constructs. \n\n")
-        super.health = self.constMod + 10
+        classDescription.append("Druidic - You know Druidic, the Secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a Message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic.")
+        if(level == 1){
+            super.health = self.constMod + 12
+        }
+        else{
+            super.health = health!
+        }
+        super.playerLevel = level
         var x = 0
-        while(x < levelT){
-            prepareLevel(super.playerLevel)
+        while(x < level){
+            prepareLevel(x)
             x += 1
         }
         setModSave()
@@ -32,103 +35,79 @@ class Druid : Classes{
     
     
     override func levelUp(){
-        super.levelUp()
-        prepareLevel(super.playerLevel)
-        setAverageHealth()
+        if(self.playerLevel < 21){
+            super.levelUp()
+            prepareLevel(super.playerLevel)
+            setAverageHealth()
+        }
     }
     
     func setHealth(){
-        health = self.health + self.constMod + dTen(1)
+        health = self.health + self.constMod + dEight(1)
     }
     
     
     func setMaxHealth(){
-        health = self.health + self.constMod + 12
+        health = self.health + self.constMod + 8
     }
     
     func setAverageHealth(){
-        health = self.health + self.constMod + 5
+        health = self.health + self.constMod + 4
     }
     
-    func divineSenseCounts(){
-        DivineSence = 1 + chaMod
-    }
-    
-    func LayOnHandsCounts(){
-        LayOnHands = playerLevel * 5
-    }
     
     func prepareLevel(_ playerLevel : Int){
-        divineSenseCounts()
-        LayOnHandsCounts()
         switch(playerLevel){
-        case 2:
-            classDescription.append("Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell-level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend, to a maximum of 6d8. \n\n")
-            classDescription.append("By 3rd level, the divine magic flowing through you makes you immune to disease.\n\n")
-            fallthrough
-        case 3:
-            classDescription.append("Your oath allows you to channel divine energy to fuel magical effects. Each Channel Divinity option provided by your oath explains how to use it. When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again. Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your paladin spell save DC\n\n")
-            levelPath(path: .CROWN)
-        case 4:
-            super.needsAbilityImprovement = true
-            fallthrough
-        case 5:
+            case 2:
+            classDescription.append("Wild Shape - Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or Long Rest. Your druid level determines the Beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a Challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.You can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a Bonus Action on Your Turn. You automatically revert if you fall Unconscious, drop to 0 Hit Points, or die.\n\n")
+            case 3:
+                classDescription.append("By 3rd level, the divine magic flowing through you makes you immune to disease\n\n")
+                levelPath(path: .LAND)
+            case 4:
+                super.needsAbilityImprovement = true
+            case 5:
             super.attackCount = 2
-            setProfBonus(3)
-        case 6:
-            levelPath(path: .CROWN)
-            classDescription.append("Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus. At 18th level, the range of this aura increases to 30 feet.\n\n")
-            fallthrough
-        case 7:
-            fallthrough
-        case 8:
+                setProfBonus(3)
+            case 6:
+                levelPath(path: .LAND)
+                classDescription.append("Land's Stride - Starting at 6th level, moving through nonmagical difficult terrain costs you no extra Movement. You can also pass through nonmagical Plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard. In addition, you have advantage on Saving Throws against Plants that are magically created or manipulated to impede Movement, such those created by the Entangle spell.\n\n")
+            //case 7:
+            case 8:
             super.needsAbilityImprovement = true
-            fallthrough
-        case 9:
+            case 9:
             classDescription.append("Brutal Attack: you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.This increases to two additional dice at 13th level and three additional dice at 17th level. ")
             setProfBonus(4)
-            fallthrough
-        case 10:
-            classDescription.append("Starting at 10th level, you and friendly creatures within 10 feet of you can't be frightened while you are conscious. At 18th level, the range of this aura increases to 30 feet./n/n")
-            levelPath(path: .CROWN)
-            fallthrough
-        case 11:
+            case 10:
+            classDescription.append("When you reach 10th level, you can’t be Charmed or Frightened by Elementals or fey, and you are immune to poison and disease./n/n")
+            levelPath(path: .LAND)
+            case 11:
             classDescription.append("By 11th level, whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage./n/n")
-            fallthrough
-        case 12:
+            case 12:
             super.needsAbilityImprovement = true
             setProfBonus(5)
-            fallthrough
-        case 13:
-            fallthrough
+            //  case 13:
             
-        case 14:
-            classDescription.append("Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch. You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest.\n\n")
-            levelPath(path: .CROWN)
-            fallthrough
-        case 15:
-            classDescription.append("Persistent Rage: Your rage ends early only if you fall unconscious or if you choose to end it.")
-            fallthrough
-        case 16:
+            case 14:
+            classDescription.append("Nature's Sanctuary - When you reach 14th level, creatures of the natural world sense your connection to Nature and become hesitant to Attack you. When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the Attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours.The creature is aware of this effect before it makes its Attack against you.\n\n")
+            levelPath(path: .LAND)
+            //  case 15:
+            case 16:
             super.needsAbilityImprovement = true
-            fallthrough
-        case 17:
+            case 17:
             setProfBonus(6)
-            fallthrough
-        case 18:
-            classDescription.append("Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.")
-            fallthrough
-        case 19:
+            case 18:
+            classDescription.append("Timeless Body - Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.")
+            classDescription.append("Beast Spells - Beginning at 18th level, you can cast many of your Druid Spells in any shape you assume using Wild Shape. You can perform the somatic and verbal Components of a druid spell while in a beast shape, but you aren't able to provide material Components.\n\n")
+            case 19:
             super.needsAbilityImprovement = true
-            fallthrough
-        case 20:
-            super.statArray[2] = statArray[2]+4
-            super.statArray[0] = statArray[0]+4
-            fallthrough
-        default:
+            case 20:
+            classDescription.append("Archdruid - At 20th level, you can use your Wild Shape an unlimited number of times.Additionally, you can ignore the verbal and somatic Components of your Druid Spells, as well as any material Components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape.\n\n")
+            
+            default:
             return
             
-        }
+            }
+            
     }
     
     
@@ -140,37 +119,27 @@ class Druid : Classes{
         super.wisModSave = super.wisMod + profBonus
         super.chaModSave = super.chaMod + profBonus
     }
-    
+ 
     enum druPath : String, CaseIterable{
-        case ANCIENTS = "Oath of the Ancients"
-        case CONQUEST = "Oath of Conquest"
-        case CROWN = "Oath of the Crown"
-        case DEVOTION = "Oath of Devotion"
-        case REDEMPTION = "Oath of Redemption"
-        case VENGEANCE = "Oath of Vengeance"
-        case OATHBREAKER = "Oathbreaker"
-        case TREACHERY = "Oath of Treachery"
+        case DREAMS = "Cirlce of Dreams"
+        case LAND = "Cirlce of Land"
+        case MOON = "Cirlce of Moon"
         
         init?(id : Int) {
             switch id {
-            case 1: self = .ANCIENTS
-            case 2: self = .CONQUEST
-            case 3: self = .CROWN
-            case 4: self = .DEVOTION
-            case 5: self = .REDEMPTION
-            case 6: self = .VENGEANCE
-            case 7: self = .OATHBREAKER
-            case 8: self = .TREACHERY
+            case 1: self = .DREAMS
+            case 2: self = .LAND
+            case 3: self = .MOON
             default: return nil
             }
         }
     }
-    
+
     func levelPath(path : druPath){
         switch(path){
             
-        case .CROWN :
-            switch(super.playerLevel){
+        case .DREAMS :
+            switch(self.playerLevel){
             case 6:
                 classDescription.append("Spirit Shield: If you are raging and another creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by 2d6. When you reach certain levels in this class, you can reduce the damage by more: by 3d6 at 10th level and by 4d6 at 14th level.")
                 fallthrough
@@ -183,7 +152,7 @@ class Druid : Classes{
             default :
                 classDescription.append("Ancestral Protectors: While you're raging, the first creature you hit with an attack on your turn becomes the target of spiritual warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage dealt by the attack. The effect on the target ends early if your rage ends.")
             }
-        case .REDEMPTION :
+        case .LAND :
             switch(super.playerLevel){
             case 6:
                 classDescription.append("Reckless Abadon: Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish when your rage ends.")
@@ -198,7 +167,7 @@ class Druid : Classes{
                 classDescription.append("Battlerager Armor: You gain the ability to use Spiked Armor as a weapon. While you are wearing spiked armor and are raging, you can use a bonus action to make one melee weapon attack with your armor spikes against a target within 5 feet of you. If the attack hits, the spikes deal 1d4 piercing damage. You use your Strength modifier for the attack and damage rolls. Additionally, when you use the Attack action to grapple a creature, the target takes 3 piercing damage if your grapple check succeeds.")
             }
             
-        case .OATHBREAKER :
+        case .MOON :
             switch(self.playerLevel){
             case 6:
                 classDescription.append("Mindless Rage: You can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage")
@@ -216,5 +185,6 @@ class Druid : Classes{
         default : return
         }
     }
-    
 }
+
+
