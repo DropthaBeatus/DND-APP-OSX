@@ -27,7 +27,7 @@ class Barbarian : Classes {
         var x = 0
         //include a way to check for approvements to class and subclass here
         while(x < levelT){
-            levelUp()
+            prepareLevel(super.playerLevel)
             x += 1
         }
         //setModSave()

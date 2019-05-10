@@ -2,7 +2,7 @@
 //  ClassEnt+CoreDataClass.swift
 //  Dungeons&DragonsCharSheet
 //
-//  Created by Liam Flaherty on 5/9/19.
+//  Created by Liam Flaherty on 5/10/19.
 //  Copyright © 2019 Liam Flaherty. All rights reserved.
 //
 //
@@ -25,14 +25,7 @@ public class ClassEnt: NSManagedObject {
     
     var savedClass : Classes{
         get{
-            var statArray = [Int]()
-            statArray.append(Int(strength))
-            statArray.append(Int(dexterity))
-            statArray.append(Int(constitution))
-            statArray.append(Int(intelligence))
-            statArray.append(Int(wisdom))
-            statArray.append(Int(charisma))
-            let tempClass = returnSpecificClass(className: classDNDName!, levelTemp: Int(playerLevel), statBlockTemp: statArray, RaceTemp: Race.init(id: raceString!), subRaceTemp: subRaceString, name : name!)
+            let tempClass = returnSpecificClass(className: classDNDName!, levelTemp: Int(playerLevel), statBlockTemp: statArraySav, RaceTemp: Race.init(id: raceString!), subRaceTemp: subRaceString, name : name!)
             return tempClass
         }
         set{
@@ -45,6 +38,21 @@ public class ClassEnt: NSManagedObject {
             self.wisdom = Int16(newValue.skillArray[4])
             self.charisma = Int16(newValue.skillArray[5])
             self.maxHealth = Int16(newValue.health)
+
+        }
+    }
+    
+    var statArraySav : [Int]{
+        get{
+            return [Int(strFull), Int(dexFull), Int(constFull), Int(intFull), Int(wisFull), Int(chaFull)]
+        }
+        set{
+            self.strFull =  Int16(newValue[0])
+            self.dexFull =  Int16(newValue[1])
+            self.constFull =  Int16(newValue[2])
+            self.intFull =  Int16(newValue[3])
+            self.wisFull =  Int16(newValue[4])
+            self.chaFull =  Int16(newValue[5])
         }
     }
     
@@ -63,29 +71,13 @@ public class ClassEnt: NSManagedObject {
         self.classDNDName = cname
         self.raceStruct = playClass.raceStruct
         self.name = playClass.name
+        self.statArraySav = playClass.statArray
         self.savedClass = playClass
-        
-        /*
-        self.classDNDName = cname
-        
-        self.playerLevel = Int16(playClass.playerLevel)
-        self.ac = Int16(playClass.AC)
-        
-        self.strength = Int16(playClass.skillArray[0])
-        self.dexterity = Int16(playClass.skillArray[1])
-        self.constitution = Int16(playClass.skillArray[2])
-        self.intelligence = Int16(playClass.skillArray[3])
-        self.wisdom = Int16(playClass.skillArray[4])
-        self.charisma = Int16(playClass.skillArray[5])
-        
-        self.raceStruct = playClass.raceStruct
-        
-        self.maxHealth = Int16(playClass.health)
-        */
-        //self.raceString = playClass.race.rawValue
+       
+
         
         if let subClassName =  subClass{
-           self.subClassDNDName = subClassName
+            self.subClassDNDName = subClassName
         } else {
             self.subClassDNDName = "none"
         }
@@ -118,8 +110,7 @@ public class ClassEnt: NSManagedObject {
         } else {
             self.subClassDNDName = "none"
         }
-
+        
     }
     
-
 }

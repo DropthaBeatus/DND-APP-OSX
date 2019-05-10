@@ -58,9 +58,11 @@ class RaceSelectViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int)
         -> String?{
+            
             if(subRaceArr != nil && readytoPickClass == false){
                 return (subRaceArr?[row])!
             }
+ 
             else if(readytoPickClass){
                 return classesArr[row].rawValue
             }
@@ -106,9 +108,9 @@ class RaceSelectViewController: UIViewController, UIPickerViewDataSource, UIPick
             }
         })
     }
-    
+    //fix this later
     @IBAction func selectBTN(_ sender: Any) {
-        subRaceArr = SubRace(race : choosenRace!)
+        subRaceArr = nil//SubRace(race : choosenRace!)
         let popvc = UIStoryboard(name: "CharacterCreation", bundle: nil).instantiateViewController(withIdentifier: "RollStatsViewController") as! RollStatsViewController
         
         
@@ -125,7 +127,6 @@ class RaceSelectViewController: UIViewController, UIPickerViewDataSource, UIPick
         }
         else if(choosenClass != nil){
             if(NameTextField.text == "" || NameTextField.text == nil){
-                print("working!")
                 let alertController = UIAlertController(title: "Name Needed!", message:
                     "Please Enter a name for your new Adventurer", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
@@ -133,17 +134,18 @@ class RaceSelectViewController: UIViewController, UIPickerViewDataSource, UIPick
                 self.present(alertController, animated: true, completion: nil)
             }
             else{
-                print("not working!")
                 //will need to segue instead of pop
                 
                 popvc.race = choosenRace
                 popvc.subRace = choosenSubRace
                 popvc.playerClass = choosenClass
-                popvc.playerName = NameTextField.text! //navigationController?.pushViewController(popvc, animated: true)
+                popvc.playerName = NameTextField.text!
+
                 self.addChild(popvc)
                 popvc.view.frame = self.view.frame
                 self.view.addSubview(popvc.view)
                 popvc.didMove(toParent: self)
+                //NavigationController?.pushViewController(popvc, animated: true)
 
             }
             

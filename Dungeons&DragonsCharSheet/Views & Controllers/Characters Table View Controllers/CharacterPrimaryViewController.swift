@@ -34,7 +34,6 @@ class CharacterPrimaryViewController: UIViewController, UITableViewDelegate, UIT
         do{
             docData = try managedContext.fetch(fetchRequest)
             tableView.reloadData()
-            print(docData[0].name! + "\n\n\n\n")
         } catch {
             print("Could not fetch characters!")
         }
@@ -84,7 +83,15 @@ class CharacterPrimaryViewController: UIViewController, UITableViewDelegate, UIT
     func deleteData(index: Int){
         docData.remove(at: index)
     }
-
+ 
+    //fix this to pageview controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Push", let destination = segue.destination as? CharacterPageViewController,
+            let row = tableView.indexPathForSelectedRow?.row {
+            destination.character = docData[row]
+            destination.playerClass = docData[row].savedClass
+        }
+    }
     
 
 
