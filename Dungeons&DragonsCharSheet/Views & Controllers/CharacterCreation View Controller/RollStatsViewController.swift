@@ -32,12 +32,6 @@ class RollStatsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        playerClass = .BARBARIAN
-        race = .DWARF
-        subRace = "Hill"
-        playerName = "Bobby da Barbarian"
-        //LabelArr = [strLabel, dexLabel, constLabel, intLabel, wisLabel, chaLabel]
-        // Do any additional setup after loading the view.
         rollStats(1)
     }
     
@@ -51,6 +45,7 @@ class RollStatsViewController: UIViewController {
     
     @IBAction func `continue`(_ sender: Any) {
 
+        
         playerName = playerName!.trimmingCharacters(in: .whitespaces)
         let ClassCreation = returnSpecificClass(className: playerClass!.rawValue, levelTemp: 1, statBlockTemp: statBlock!, RaceTemp: race!, subRaceTemp: subRace, name : playerName!)
 
@@ -69,22 +64,8 @@ class RollStatsViewController: UIViewController {
         }
         
         navigationController?.popViewController(animated: true)
-        /*
-        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CharacterViewController") as! CharacterViewController
-        
-        popvc.race = race
-        popvc.subRace = subRace
-        popvc.playerClass = playerClass
-        popvc.statBlock = statBlock
-        
-        self.addChild(popvc)
-        popvc.view.frame = self.view.frame
-        self.view.addSubview(popvc.view)
-        popvc.didMove(toParent: self)
- */
-        
-        
     }
+    
     func showAnimate()
     {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -116,6 +97,6 @@ class RollStatsViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
-    
+
 
 }

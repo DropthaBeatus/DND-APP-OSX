@@ -16,7 +16,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="soT-xX-F9E" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UM8-px-H2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-718" y="-1504"/>
+            <point key="canvasLocation" x="975" y="-799"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RX8-bf-Ehy">
@@ -41,27 +41,42 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61d-fk-WhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="344" y="-863"/>
+            <point key="canvasLocation" x="0.0" y="-1196"/>
         </scene>
-        <!--Charactaer Select Table View Controller-->
+        <!--Character Primary View Controller-->
         <scene sceneID="F9n-cs-5qF">
             <objects>
-                <viewController id="gcD-XT-KsK" customClass="CharactaerSelectTableViewController" customModule="Dungeons_DragonsCharSheet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gcD-XT-KsK" customClass="CharacterPrimaryViewController" customModule="Dungeons_DragonsCharSheet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qoy-9C-DsI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yT3-dP-gOu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yT3-dP-gOu">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="559" id="50R-U0-UDY"/>
+                                </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="XsT-1Q-zYN">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="XsT-1Q-zYN" customClass="CharacterTableViewCell" customModule="Dungeons_DragonsCharSheet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XsT-1Q-zYN" id="aGH-wX-707">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Testing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABJ-wP-IaM">
+                                                    <rect key="frame" x="28" y="24" width="178" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="NameLabel" destination="ABJ-wP-IaM" id="GG7-2a-8Vc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -89,13 +104,16 @@
                             <constraint firstItem="5BU-Eg-ljx" firstAttribute="bottom" secondItem="fQx-Kg-58C" secondAttribute="bottom" id="AQB-mq-Dkp"/>
                             <constraint firstItem="fQx-Kg-58C" firstAttribute="top" secondItem="5BU-Eg-ljx" secondAttribute="top" constant="559" id="QwT-zm-lkB"/>
                             <constraint firstItem="5BU-Eg-ljx" firstAttribute="trailing" secondItem="fQx-Kg-58C" secondAttribute="trailing" id="Xid-Zc-VnZ"/>
-                            <constraint firstItem="5BU-Eg-ljx" firstAttribute="bottom" secondItem="yT3-dP-gOu" secondAttribute="bottom" constant="44" id="ZoW-1V-715"/>
+                            <constraint firstItem="5BU-Eg-ljx" firstAttribute="bottom" secondItem="yT3-dP-gOu" secondAttribute="bottom" constant="44" id="gbd-9h-zvq"/>
                             <constraint firstItem="yT3-dP-gOu" firstAttribute="top" secondItem="5BU-Eg-ljx" secondAttribute="top" id="ik4-SU-6PN"/>
                             <constraint firstItem="yT3-dP-gOu" firstAttribute="leading" secondItem="5BU-Eg-ljx" secondAttribute="leading" id="uMl-Ke-yjN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5BU-Eg-ljx"/>
                     </view>
                     <navigationItem key="navigationItem" id="GIA-Yv-sxa"/>
+                    <connections>
+                        <outlet property="tableView" destination="yT3-dP-gOu" id="uRZ-bK-jlC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJq-nE-LhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +143,7 @@
                 <viewControllerPlaceholder storyboardName="CharacterCreation" id="t9E-MV-mm1" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IbN-e5-7pF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="-739"/>
+            <point key="canvasLocation" x="-338" y="-1196"/>
         </scene>
     </scenes>
 </document>
